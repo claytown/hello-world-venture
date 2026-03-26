@@ -4,6 +4,7 @@ import { join } from 'path';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { HealthModule } from './health/health.module';
+import { GreetingModule } from './modules/greeting/greeting.module';
 
 @Module({
   imports: [
@@ -12,6 +13,7 @@ import { HealthModule } from './health/health.module';
       exclude: ['/api/(.*)'],
     }),
     HealthModule,
+    GreetingModule,
   ],
   controllers: [AppController],
   providers: [AppService],
